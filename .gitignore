@@ -1,0 +1,8 @@
+/RPMS
+*.o
+/translations/*.qm
+/harbour-iconpacksupport-gui
+/Makefile
+/*.list
+/moc*.cpp
+/*.pro.*
