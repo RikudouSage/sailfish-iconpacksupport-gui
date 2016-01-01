@@ -5,6 +5,9 @@ import "../js/db.js" as DB
 import "../js/functions.js" as Func
 import "../components"
 
+/*
+ This is a dialog, which just tells user what will happen, if user clicks Yes, MainPage.qml handles it and takes action
+ */
 Dialog {
     id: page
     property string iconpack
