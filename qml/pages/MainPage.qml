@@ -18,6 +18,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Restore")
+                enabled: active_iconpack != "none"
                 signal rejected(string orig) // signal that gets called when user rejects dialog
                 onClicked: {
                     DB.open().transaction(function(tx) {
@@ -37,9 +38,11 @@ Page {
                         });
                     });
                 }
-                onRejected: { // hanled rejected signal
+                onRejected: { // handles rejected signal
                     DB.open().transaction(function(tx) {
+                        console.log("rejected - restore");
                         tx.executeSql("UPDATE active_iconpack SET active='"+orig+"'");
+                        active_iconpack = orig;
                     });
 
                 }
@@ -94,6 +97,9 @@ Page {
                                     active_id = m_index;
                                     iconpack.apply(m_text);
                                 });
+                                dialog.rejected.connect(function() {
+                                    rejected(orig);
+                                });
                             });
                         } else {
                             infotext.text = qsTr("This icon pack is already active.");
@@ -103,6 +109,9 @@ Page {
                     }
                     onRejected: {
                         DB.open().transaction(function(tx) {
+                            console.log("rejected - confirm");
+                            console.log(orig);
+                            console.log("UPDATE active_iconpack SET active='"+orig+"'");
                             tx.executeSql("UPDATE active_iconpack SET active='"+orig+"'");
                         });
                     }

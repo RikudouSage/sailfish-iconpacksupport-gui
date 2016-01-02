@@ -4,17 +4,17 @@
 <context>
     <name>Confirm</name>
     <message>
-        <location filename="../qml/pages/Confirm.qml" line="24"/>
+        <location filename="../qml/pages/Confirm.qml" line="25"/>
         <source>Yes</source>
         <translation>Ano</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Confirm.qml" line="25"/>
+        <location filename="../qml/pages/Confirm.qml" line="26"/>
         <source>No</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Confirm.qml" line="30"/>
+        <location filename="../qml/pages/Confirm.qml" line="31"/>
         <source>Do you want to apply &lt;b&gt;%1&lt;/b&gt; icon pack?&lt;br&gt;If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
         <translation>Chcete nastavit sadu ikonek &apos;&lt;b&gt;%1&lt;/b&gt;&apos;? Pokud ji povolíte, aplikace může přestat na chvíli odpovídat, také se restartuje vaše domovská obrazovka, kvůli čemuž se zavřou všechny otevřené aplikace.</translation>
     </message>
@@ -35,22 +35,22 @@
         <translation>Obnovit</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="55"/>
+        <location filename="../qml/pages/MainPage.qml" line="58"/>
         <source>Icon pack support</source>
         <translation>Podpora setů ikon</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="65"/>
+        <location filename="../qml/pages/MainPage.qml" line="68"/>
         <source>Loading...</source>
         <translation>Načítání...</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="99"/>
+        <location filename="../qml/pages/MainPage.qml" line="105"/>
         <source>This icon pack is already active.</source>
         <translation>Tento balík ikonek je již aktivní.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="144"/>
+        <location filename="../qml/pages/MainPage.qml" line="153"/>
         <source>It looks like you don&apos;t have any icon pack installed :(</source>
         <translation>Vypadá to, že nemáte nainstalován žádný balíček ikon :(</translation>
     </message>
