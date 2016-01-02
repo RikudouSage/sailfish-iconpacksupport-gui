@@ -4,17 +4,17 @@
 <context>
     <name>Confirm</name>
     <message>
-        <location filename="../qml/pages/Confirm.qml" line="20"/>
+        <location filename="../qml/pages/Confirm.qml" line="24"/>
         <source>Yes</source>
         <translation>Ano</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Confirm.qml" line="21"/>
+        <location filename="../qml/pages/Confirm.qml" line="25"/>
         <source>No</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Confirm.qml" line="26"/>
+        <location filename="../qml/pages/Confirm.qml" line="30"/>
         <source>Do you want to apply &lt;b&gt;%1&lt;/b&gt; icon pack?&lt;br&gt;If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
         <translation>Chcete nastavit sadu ikonek &apos;&lt;b&gt;%1&lt;/b&gt;&apos;? Pokud ji povolíte, aplikace může přestat na chvíli odpovídat, také se restartuje vaše domovská obrazovka, kvůli čemuž se zavřou všechny otevřené aplikace.</translation>
     </message>
@@ -58,17 +58,17 @@
 <context>
     <name>Restore</name>
     <message>
-        <location filename="../qml/pages/Restore.qml" line="20"/>
+        <location filename="../qml/pages/Restore.qml" line="23"/>
         <source>Yes</source>
         <translation>Ano</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Restore.qml" line="21"/>
+        <location filename="../qml/pages/Restore.qml" line="24"/>
         <source>No</source>
         <translation>Ne</translation>
     </message>
     <message>
-        <location filename="../qml/pages/Restore.qml" line="26"/>
+        <location filename="../qml/pages/Restore.qml" line="29"/>
         <source>Do you want to restore icon pack?&lt;br&gt;If you restore, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
         <translation>Chcete obnovit sadu ikonek? Pokud ji obnovíte, aplikace může přestat na chvíli odpovídat, také se restartuje vaše domovská obrazovka, kvůli čemuž se zavřou všechny otevřené aplikace.</translation>
     </message>
