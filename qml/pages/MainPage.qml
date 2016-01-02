@@ -75,7 +75,7 @@ Page {
                     width: page.width - 2 * Theme.paddingLarge
                     x: Theme.paddingLarge
                     signal rejected(string orig)
-                    text: m_text
+                    text: iconpack.getName(m_text)
                     active: m_active
                     onClicked: {
                         infotext.visible = false;

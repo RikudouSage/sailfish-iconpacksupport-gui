@@ -38,6 +38,12 @@ public:
         system("echo \"NoDisplay=true\" >> /usr/share/applications/harbour-iconpacksupport.desktop");
         return true;
     }
+
+    Q_INVOKABLE QString getName(const QString packname) const { // gets name from the package file
+        std::string c_packname = packname.toStdString();
+        std::string command = "cat /usr/share/harbour-iconpack-"+c_packname+"/package";
+        return QString::fromStdString(exec(command.c_str()));
+    }
 };
 
 #endif // ICONPACK
