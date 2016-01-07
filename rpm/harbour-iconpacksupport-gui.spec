@@ -13,14 +13,14 @@ Name:       harbour-iconpacksupport-gui
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:    Sailfish Icon pack support GUI
-Version:    0.2
+Version:    0.4
 Release:    1
 Group:      Qt/Qt
 License:    LICENSE
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-iconpacksupport-gui.yaml
-Requires:   sailfishsilica-qt5 >= 0.10.9, expect, harbour-iconpacksupport
+Requires:   sailfishsilica-qt5 >= 0.10.9, expect, harbour-themepack-support >= 0.0.5-1
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)

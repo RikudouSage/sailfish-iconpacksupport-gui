@@ -140,8 +140,11 @@ Page {
                     }
 
                     var res2 = tx.executeSql("SELECT * FROM firstrun"); // checks if app is run for first time
-                    if(!res2.rows.length) { // it's first time running this app
-                        tx.executeSql("INSERT INTO firstrun (firstrun) VALUES (1)");
+                    if(!res2.rows.length || res2.rows.item(0).firstrun < 2) { // it's first time running this app
+                        if(!res2.rows.length) {
+                            tx.executeSql("INSERT INTO firstrun (firstrun) VALUES (1)");
+                        }
+                        tx.executeSql("UPDATE firstrun SET firstrun=2");
                         iconpack.hideIcon(); // hides icon of original app, so user doesn't have to have two same apps on homescreen
                     }
 

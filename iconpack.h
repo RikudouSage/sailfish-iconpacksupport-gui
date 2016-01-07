@@ -18,7 +18,7 @@ public:
     }
 
     Q_INVOKABLE QString listIconPacks() const { // list all dirs in /usr/share which start with harbour-iconpack- prefix
-        return QString::fromStdString(exec("cd /usr/share/; ls -d harbour-iconpack-* | cut -c18-"));
+        return QString::fromStdString(exec("cd /usr/share/; ls -d harbour-themepack-* | cut -c19-"));
     }
 
     Q_INVOKABLE bool apply(const QString name) const { // calls apply script, which then runs original application and tells it to apply the icon theme
@@ -36,13 +36,14 @@ public:
     Q_INVOKABLE bool hideIcon() const { // hides icon of original app, so user does not have to have two same icons on home screen
         setuid(0);
         system("echo \"NoDisplay=true\" >> /usr/share/applications/harbour-iconpacksupport.desktop");
+        system("echo \"NoDisplay=true\" >> /usr/share/applications/harbour-themepacksupport.desktop");
         return true;
     }
 
     Q_INVOKABLE QString getName(const QString packname) const { // gets name from the package file
         std::string c_packname = packname.toStdString();
-        std::string command = "cat /usr/share/harbour-iconpack-"+c_packname+"/package";
-        return QString::fromStdString(exec(command.c_str()));
+        std::string command = "cat /usr/share/harbour-themepack-"+c_packname+"/package";
+        return QString::fromStdString(exec(command.c_str())).trimmed();
     }
 };
 

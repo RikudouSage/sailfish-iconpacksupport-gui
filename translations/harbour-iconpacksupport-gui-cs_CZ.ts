@@ -50,7 +50,7 @@
         <translation>Tento balík ikonek je již aktivní.</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="153"/>
+        <location filename="../qml/pages/MainPage.qml" line="156"/>
         <source>It looks like you don&apos;t have any icon pack installed :(</source>
         <translation>Vypadá to, že nemáte nainstalován žádný balíček ikon :(</translation>
     </message>
