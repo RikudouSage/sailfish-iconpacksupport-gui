@@ -20,7 +20,7 @@ License:    LICENSE
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-iconpacksupport-gui.yaml
-Requires:   sailfishsilica-qt5 >= 0.10.9, expect, harbour-themepack-support >= 0.0.5-1
+Requires:   sailfishsilica-qt5 >= 0.10.9, expect, harbour-themepacksupport >= 0.0.5-1
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)

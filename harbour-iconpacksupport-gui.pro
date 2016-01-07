@@ -30,6 +30,7 @@ SAILFISHAPP_ICONS = 86x86
 CONFIG += sailfishapp_i18n
 
 TRANSLATIONS += translations/harbour-iconpacksupport-gui-cs_CZ.ts
+TRANSLATIONS += translations/harbour-iconpacksupport-gui-sv.ts
 
 HEADERS += \
     exec.h \
