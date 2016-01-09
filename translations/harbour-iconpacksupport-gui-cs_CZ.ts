@@ -50,16 +50,16 @@
         <translation>Obnovit</translation>
     </message>
     <message>
-        <source>Icon pack support</source>
-        <translation>Podpora setů ikon</translation>
-    </message>
-    <message>
         <source>icons</source>
         <translation>ikony</translation>
     </message>
     <message>
         <source>fonts</source>
         <translation>fonty</translation>
+    </message>
+    <message>
+        <source>Themes</source>
+        <translation>Témata</translation>
     </message>
 </context>
 <context>

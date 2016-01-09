@@ -75,7 +75,7 @@ Page {
             spacing: Theme.paddingLarge
 
             PageHeader {
-                title: qsTr("Icon pack support")
+                title: qsTr("Themes")
                 //title: iconpack.whoami()
             }
 

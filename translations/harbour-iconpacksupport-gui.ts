@@ -50,15 +50,15 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Icon pack support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>icons</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>fonts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Themes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
