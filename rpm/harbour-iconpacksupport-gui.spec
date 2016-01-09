@@ -37,6 +37,20 @@ Short description of my SailfishOS Application
 # >> setup
 # << setup
 
+%preun
+if [ "$1" = "0" ]; then
+    rm -rf /home/nemo/.local/share/harbour-iconpacksupport-gui
+    filepath="/usr/share/applications/harbour-themepacksupport.desktop"
+    if [ -e "$filepath" ]; then
+        if grep -q NoDisplay "$filepath"; then
+            cont=$(cat $filepath)
+            replace=""
+            repl=${cont//NoDisplay=true/$replace}
+            echo "$repl" > $filepath
+        fi
+    fi
+fi
+
 %build
 # >> build pre
 # << build pre

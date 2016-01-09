@@ -5,3 +5,20 @@ function getIconPacks() {
     packs.pop();
     return packs;
 }
+
+function getCapabilities() {
+    var capabilities = ip.capabilities(iconpack);
+    var ret = {
+        icons: false,
+        fonts: false
+    };
+
+    console.log(capabilities);
+    if(capabilities[0] == "true") { // string because of QStringList
+        ret.icons = true;
+    }
+    if(capabilities[1] == "true") {
+        ret.fonts = true;
+    }
+    return ret;
+}

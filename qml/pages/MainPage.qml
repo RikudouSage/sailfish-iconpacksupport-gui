@@ -78,6 +78,7 @@ Page {
                     width: page.width - 2 * Theme.paddingLarge
                     x: Theme.paddingLarge
                     signal rejected(string orig)
+                    signal accepted(string type)
                     text: iconpack.getName(m_text)
                     active: m_active
                     onClicked: {
@@ -88,6 +89,12 @@ Page {
                                 var orig = active_iconpack;
                                 tx.executeSql("UPDATE active_iconpack SET active='"+m_text+"'");
                                 dialog.accepted.connect(function() {
+                                    console.log(dialog.fonts);
+                                    console.log(dialog.icons);
+                                    if(!dialog.fonts && !dialog.icons) {
+                                        rejected(orig);
+                                        return false;
+                                    }
 
                                     if(active_id > -1) {
                                         listview.itemAt(active_id).active = false;
@@ -95,7 +102,40 @@ Page {
                                     active = true;
                                     active_iconpack = m_text;
                                     active_id = m_index;
-                                    iconpack.apply(m_text);
+                                    var homescreen = false;
+                                    if(dialog.icons) {
+                                        if(!dialog.fonts) {
+                                            homescreen = true;
+                                        }
+
+                                        console.log("Icons applying, "+(homescreen?"restarting homescreen":"not restarting homescreen"));
+
+                                        iconpack.apply_icons(m_text, homescreen);
+                                    }
+                                    if(dialog.fonts) {
+                                        if(!dialog.icons) {
+                                            homescreen = true;
+                                        }
+
+                                        console.log("Fonts applying, "+(homescreen?"restarting homescreen":"not restarting homescreen"));
+
+                                        iconpack.apply_fonts(m_text, homescreen);
+                                    }
+                                    if(!homescreen) {
+                                        console.log("Restarting homescreen separately");
+                                        iconpack.restart_homescreen();
+                                    }
+
+                                    var type = "";
+                                    if(dialog.fonts && dialog.icons) {
+                                        type = "both";
+                                    } else if(dialog.icons) {
+                                        type = "icons";
+                                    } else if(dialog.fonts) {
+                                        type = "fonts";
+                                    }
+                                    console.log("Type: "+type);
+                                    accepted(type);
                                 });
                                 dialog.rejected.connect(function() {
                                     rejected(orig);
@@ -113,6 +153,12 @@ Page {
                             console.log(orig);
                             console.log("UPDATE active_iconpack SET active='"+orig+"'");
                             tx.executeSql("UPDATE active_iconpack SET active='"+orig+"'");
+                        });
+                    }
+                    onAccepted: {
+                        DB.open().transaction(function(tx){
+                            console.log("UPDATE active_iconpack SET type='"+type+"'");
+                            tx.executeSql("UPDATE active_iconpack SET type='"+type+"'");
                         });
                     }
                 }
@@ -140,12 +186,19 @@ Page {
                     }
 
                     var res2 = tx.executeSql("SELECT * FROM firstrun"); // checks if app is run for first time
-                    if(!res2.rows.length || res2.rows.item(0).firstrun < 2) { // it's first time running this app
-                        if(!res2.rows.length) {
+                    if(!res2.rows.length || res2.rows.item(0).firstrun < 3) { // it's first time running this app
+                        if(!res2.rows.length) { // first run
                             tx.executeSql("INSERT INTO firstrun (firstrun) VALUES (1)");
                         }
-                        tx.executeSql("UPDATE firstrun SET firstrun=2");
-                        iconpack.hideIcon(); // hides icon of original app, so user doesn't have to have two same apps on homescreen
+                        if(res2.rows.length < 2) { // hides icon
+                            tx.executeSql("UPDATE firstrun SET firstrun=2");
+                            iconpack.hideIcon(); // hides icon of original app, so user doesn't have to have two same apps on homescreen
+                        }
+
+                        if(res2.rows.length < 3) { // alters table to include multiple values
+                            tx.executeSql("ALTER TABLE active_iconpack ADD type TEXT");
+                            tx.executeSql("UPDATE firstrun SET firstrun=3");
+                        }
                     }
 
                     var packs = Func.getIconPacks(); //gets list of icon packs

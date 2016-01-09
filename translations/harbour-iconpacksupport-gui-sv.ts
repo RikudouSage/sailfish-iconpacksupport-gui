@@ -15,6 +15,14 @@
         <source>Do you want to apply &lt;b&gt;%1&lt;/b&gt; icon pack?&lt;br&gt;If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
         <translation>Vill du tillämpa &lt;b&gt;%1&lt;/b&gt; ikonpaket?&lt;br&gt;Om du väljer att tillämpa paketet, kanske appen slutar att svara ett tag och hemskärmen startas om, vilket kommer att resultera i att alla öppna appar stängs.</translation>
     </message>
+    <message>
+        <source>Install icons from theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install fonts from theme</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

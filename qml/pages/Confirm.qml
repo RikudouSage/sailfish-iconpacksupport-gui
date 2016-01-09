@@ -13,6 +13,9 @@ Dialog {
     id: page
     property string iconpack
     property string name: ip.getName(iconpack)
+    property var capabilities: Func.getCapabilities();
+    property bool fonts: capabilities.fonts
+    property bool icons: capabilities.icons
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
@@ -22,6 +25,7 @@ Dialog {
             id: column
             width: parent.width
             DialogHeader {
+                id: header
                 acceptText: qsTr("Yes")
                 cancelText: qsTr("No")
             }
@@ -31,6 +35,45 @@ Dialog {
                 text: qsTr("Do you want to apply <b>%1</b> icon pack?<br>If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.").arg(name)
                 textFormat: Text.RichText
                 wrapMode: Text.Wrap
+            }
+            IconTextSwitch {
+                id: include_icons
+                automaticCheck: true
+                text: qsTr("Install icons from theme")
+                checked: true
+                enabled: capabilities.icons
+                onClicked: {
+                    icons = include_icons.checked
+                    if(!include_fonts.checked && !include_icons.checked) {
+                        header.acceptText = qsTr("No");
+                    } else {
+                        header.acceptText = qsTr("Yes");
+                    }
+                }
+            }
+
+            IconTextSwitch {
+                id: include_fonts
+                automaticCheck: true
+                text: qsTr("Install fonts from theme")
+                checked: true
+                enabled: capabilities.fonts
+                onClicked: {
+                    fonts = include_fonts.checked
+                    if(!include_fonts.checked && !include_icons.checked) {
+                        header.acceptText = qsTr("No");
+                    } else {
+                        header.acceptText = qsTr("Yes");
+                    }
+                }
+            }
+            Component.onCompleted: {
+                if(!capabilities.fonts) {
+                    include_fonts.checked = false;
+                }
+                if(!capabilities.icons) {
+                    include_icons.checked = false;
+                }
             }
         }
     }

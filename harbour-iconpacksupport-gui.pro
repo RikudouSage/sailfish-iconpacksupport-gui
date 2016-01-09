@@ -2,7 +2,9 @@ TARGET = harbour-iconpacksupport-gui
 
 MY_FILES = \
 other/apply.sh \
-other/restore.sh
+other/restore.sh \
+other/apply_font.sh \
+other/homescreen.sh
 
 OTHER_SOURCES += $$MY_FILES
 
