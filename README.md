@@ -1,6 +1,6 @@
 # Theme pack support GUI for SailfishOS
 
-This app is a GUI for [Theme pack support for Sailfish OS](https://github.com/fravaccaro/themepacksupport-sailfishos) - it does not implement anything on its own but strictly uses the Theme pack support script to do things.
+This app is a GUI for [Theme pack support for Sailfish OS](https://github.com/fravaccaro/themepacksupport-sailfishos) - it does not implement anything on its own but strictly uses the Theme pack support script to do things (with only exception being finding of available theme packs).
 
 For communication with original script it uses [expect](http://linux.die.net/man/1/expect) tool, which is a dependency.
 
