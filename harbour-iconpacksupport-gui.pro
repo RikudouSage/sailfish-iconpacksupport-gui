@@ -4,7 +4,8 @@ MY_FILES = \
 other/apply.sh \
 other/restore.sh \
 other/apply_font.sh \
-other/homescreen.sh
+other/homescreen.sh \
+other/restore_fonts.sh
 
 OTHER_SOURCES += $$MY_FILES
 

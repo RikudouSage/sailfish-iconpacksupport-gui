@@ -32,7 +32,7 @@ Dialog {
             Label {
                 width: parent.width - Theme.paddingLarge * 2
                 x: Theme.paddingLarge
-                text: qsTr("Do you want to apply <b>%1</b> icon pack?<br>If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.").arg(name)
+                text: qsTr("Do you want to apply <b>%1</b> theme pack?<br>If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.").arg(name)
                 textFormat: Text.RichText
                 wrapMode: Text.Wrap
             }

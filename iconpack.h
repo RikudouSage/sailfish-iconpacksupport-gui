@@ -46,8 +46,13 @@ public:
         return true;
     }
 
-    Q_INVOKABLE bool restore() const { // calls restore script, which runs original application and restores original icon pack
-        system("/usr/share/harbour-iconpacksupport-gui/restore.sh");
+    Q_INVOKABLE bool restore(const bool icons, const bool fonts) const { // calls restore script, which runs original application and restores original icon pack
+        if(icons) {
+            system("/usr/share/harbour-iconpacksupport-gui/restore.sh");
+        }
+        if(fonts) {
+            system("/usr/share/harbour-iconpacksupport-gui/restore_fonts.sh");
+        }
         return true;
     }
 

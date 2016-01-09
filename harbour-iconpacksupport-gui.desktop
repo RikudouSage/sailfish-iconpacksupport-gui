@@ -3,6 +3,6 @@ Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-iconpacksupport-gui
 Exec=invoker --type=generic -s /usr/bin/harbour-iconpacksupport-gui
-Name=Icon pack support
-Name[cs_CZ]=Podpora setů ikonek
+Name=Theme pack support
+Name[cs_CZ]=Podpora témat
 

@@ -12,15 +12,15 @@
         <translation>Nej</translation>
     </message>
     <message>
-        <source>Do you want to apply &lt;b&gt;%1&lt;/b&gt; icon pack?&lt;br&gt;If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
-        <translation>Vill du tillämpa &lt;b&gt;%1&lt;/b&gt; ikonpaket?&lt;br&gt;Om du väljer att tillämpa paketet, kanske appen slutar att svara ett tag och hemskärmen startas om, vilket kommer att resultera i att alla öppna appar stängs.</translation>
-    </message>
-    <message>
         <source>Install icons from theme</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Install fonts from theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to apply &lt;b&gt;%1&lt;/b&gt; theme pack?&lt;br&gt;If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -53,6 +53,14 @@
         <source>Icon pack support</source>
         <translation>Ikonpaketstöd</translation>
     </message>
+    <message>
+        <source>icons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>fonts</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Restore</name>
@@ -65,8 +73,16 @@
         <translation>Nej</translation>
     </message>
     <message>
-        <source>Do you want to restore icon pack?&lt;br&gt;If you restore, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
-        <translation>Vill du återställa ikonpaket?&lt;br&gt;Om du väljer att återställa, kanske appen slutar att svara ett tag och din hemskärm startas om, vilket kommer att resultera i att alla öppna appar stängs.</translation>
+        <source>Do you want to restore theme pack?&lt;br&gt;If you restore, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore default icons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restore default fonts</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
