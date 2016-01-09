@@ -59,7 +59,7 @@
     </message>
     <message>
         <source>Themes</source>
-        <translation>Témata</translation>
+        <translation>Motivy</translation>
     </message>
 </context>
 <context>

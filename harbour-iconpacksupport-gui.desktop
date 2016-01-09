@@ -4,5 +4,5 @@ X-Nemo-Application-Type=silica-qt5
 Icon=harbour-iconpacksupport-gui
 Exec=invoker --type=generic -s /usr/bin/harbour-iconpacksupport-gui
 Name=Themes
-Name[cs_CZ]=Témata
+Name[cs_CZ]=Motivy
 Name[sv]=Teman
