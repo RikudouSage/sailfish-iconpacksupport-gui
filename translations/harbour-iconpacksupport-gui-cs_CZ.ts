@@ -2,6 +2,41 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="cs_CZ">
 <context>
+    <name>About</name>
+    <message>
+        <source>About</source>
+        <translation>O aplikaci</translation>
+    </message>
+    <message>
+        <source>Translators</source>
+        <translation>Překladatelé</translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation>Švédština</translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation>Finština</translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation>Čeština</translation>
+    </message>
+    <message>
+        <source>This app is a GUI for theme pack support by &lt;b&gt;fravaccaro&lt;/b&gt;. The core functionality is implemented by him in separate app - this app just calls the core functions from more user friendly interface. If you have problems with core funcionality (fonts or icons not applying etc.), contact him via button below.&lt;br&gt;&lt;br&gt;If you have problem with the GUI, you can contact me in comments on OpenRepos (via button below).</source>
+        <translation>Tato aplikace je GUI pro podporu motivů, kterou vydal &lt;b&gt;fravaccaro&lt;/b&gt;. Veškeré funkce jsou implementovány jím v oddělené aplikaci - tato aplikace pouze volá funkce jeho aplikace v uživatelsky přívětivějším prostředí. Pokud máte problémy se základní funkčností (fonty nebo ikony se neaplikují, atd.), kontaktujte jej pomocí tlačítka níže.&lt;br&gt;&lt;br&gt;Pokud máte problém s GUI, můžete mě kontaktovat v komentářích na OpenRepos (pomocí tlačítka níže).</translation>
+    </message>
+    <message>
+        <source>Contact fravaccaro</source>
+        <translation>Kontaktovat fravaccaro</translation>
+    </message>
+    <message>
+        <source>Contact me</source>
+        <translation>Kontaktovat autora GUI</translation>
+    </message>
+</context>
+<context>
     <name>Confirm</name>
     <message>
         <source>Yes</source>
@@ -60,6 +95,10 @@
     <message>
         <source>Themes</source>
         <translation>Motivy</translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation>O aplikaci</translation>
     </message>
 </context>
 <context>

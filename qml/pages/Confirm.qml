@@ -14,8 +14,12 @@ Dialog {
     property string iconpack
     property string name: ip.getName(iconpack)
     property var capabilities: Func.getCapabilities();
-    property bool fonts: capabilities.fonts
+    property var fonts: capabilities.fonts
     property bool icons: capabilities.icons
+
+    // these properties are handed from MainPage, at default state they copy the capabilities, but when changed, they overwrite capabilities
+    property bool input_fonts: capabilities.fonts
+    property bool input_icons: capabilities.icons
     SilicaFlickable {
         id: flickable
         anchors.fill: parent
@@ -68,11 +72,35 @@ Dialog {
                 }
             }
             Component.onCompleted: {
+
+                if(capabilities.fonts != input_fonts) {
+                    console.log("Fonts capabilities changed");
+                    capabilities.fonts = input_fonts;
+                    include_fonts.enabled = capabilities.fonts;
+                }
+
+                if(capabilities.icons != input_icons) {
+                    console.log("Icons capabilities changed");
+                    capabilities.icons = input_icons;
+                    include_icons.enabled = capabilities.icons;
+                }
+
+                console.log("Fonts: "+capabilities.fonts);
+                console.log("Icons: "+capabilities.icons);
+
                 if(!capabilities.fonts) {
+                    fonts = false;
                     include_fonts.checked = false;
                 }
                 if(!capabilities.icons) {
+                    icons = false;
                     include_icons.checked = false;
+                }
+
+                if(!include_fonts.checked && !include_icons.checked) {
+                    header.acceptText = qsTr("No");
+                } else {
+                    header.acceptText = qsTr("Yes");
                 }
             }
         }

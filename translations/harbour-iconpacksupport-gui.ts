@@ -2,6 +2,41 @@
 <!DOCTYPE TS>
 <TS version="2.1">
 <context>
+    <name>About</name>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translators</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swedish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Finnish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Czech</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This app is a GUI for theme pack support by &lt;b&gt;fravaccaro&lt;/b&gt;. The core functionality is implemented by him in separate app - this app just calls the core functions from more user friendly interface. If you have problems with core funcionality (fonts or icons not applying etc.), contact him via button below.&lt;br&gt;&lt;br&gt;If you have problem with the GUI, you can contact me in comments on OpenRepos (via button below).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contact fravaccaro</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Contact me</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Confirm</name>
     <message>
         <source>Yes</source>
@@ -59,6 +94,10 @@
     </message>
     <message>
         <source>Themes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

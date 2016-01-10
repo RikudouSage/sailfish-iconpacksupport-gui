@@ -19,6 +19,14 @@ Page {
         contentHeight: column.height
 
         PullDownMenu {
+
+            MenuItem {
+                text: qsTr("About")
+                onClicked: {
+                    pageStack.push("About.qml");
+                }
+            }
+
             MenuItem {
                 text: qsTr("Restore")
                 enabled: active_iconpack != "none" || active_fontpack != "none"
@@ -103,8 +111,20 @@ Page {
                     active: m_active
                     onClicked: {
                         infotext.visible = false;
-                        if(!active) {
-                            var dialog = pageStack.push("Confirm.qml",{iconpack: m_text});
+                        if(!active || true) {
+                            var opts = {
+                                iconpack: m_text
+                            };
+
+                            if(active_id == m_index) {
+                                opts.input_icons = false;
+                            }
+
+                            if(active_id_fonts == m_index) {
+                                opts.input_fonts = false;
+                            }
+
+                            var dialog = pageStack.push("Confirm.qml",opts);
                             dialog.accepted.connect(function() {
                                 if(!dialog.fonts && !dialog.icons) {
                                     return false;
