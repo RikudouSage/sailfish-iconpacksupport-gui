@@ -58,6 +58,26 @@
         <source>Do you want to apply &lt;b&gt;%1&lt;/b&gt; theme pack?&lt;br&gt;If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Sailfish regular font weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sailfish light font weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Android regular font weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Android light font weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Font options</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

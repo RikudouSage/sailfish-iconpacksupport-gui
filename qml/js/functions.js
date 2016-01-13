@@ -22,3 +22,13 @@ function getCapabilities() {
     }
     return ret;
 }
+
+function getWeights() {
+    var weights = ip.weights(iconpack);
+    var ret = [];
+    for(var i in weights) {
+        var w = String(weights[i]).replace(".ttf","");
+        ret.push(w);
+    }
+    return ret;
+}

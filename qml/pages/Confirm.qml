@@ -16,6 +16,10 @@ Dialog {
     property var capabilities: Func.getCapabilities();
     property var fonts: capabilities.fonts
     property bool icons: capabilities.icons
+    property string font_active_sailfish
+    property string font_active_sailfish_light
+    property string font_active_android
+    property string font_active_android_light
 
     // these properties are handed from MainPage, at default state they copy the capabilities, but when changed, they overwrite capabilities
     property bool input_fonts: capabilities.fonts
@@ -71,6 +75,143 @@ Dialog {
                     }
                 }
             }
+
+            Column {
+                id: fontsettings
+                width: parent.width
+                visible: include_fonts.checked && include_fonts.enabled
+
+                Placeholder { }
+
+                PageHeader {
+                    title: qsTr("Font options")
+                }
+
+                ListModel { // weight model, sailfish
+                    id: wmodels
+                }
+
+                ListModel { // weight model, sailfish light
+                    id: wmodelsl
+                }
+
+                ListModel { // weight model, android
+                    id: wmodela
+                }
+
+                ListModel { // weight model, android light
+                    id: wmodelal
+                }
+
+                FLabel {
+                    text: qsTr("Sailfish regular font weight")
+                }
+                Repeater {
+                    id: views
+                    model: wmodels
+                    IconTextSwitch {
+                        automaticCheck: true
+                        text: w_name
+                        checked: w_checked
+                        onClicked: {
+                            var count = wmodels.count;
+                            for(var i = 0; i < count; i++) {
+                                views.itemAt(i).checked = false;
+                            }
+                            checked = true;
+                            font_active_sailfish = text;
+                        }
+                    }
+                }
+
+                Placeholder { }
+                FLabel {
+                    text: qsTr("Sailfish light font weight")
+                }
+                Repeater {
+                    id: viewsl
+                    model: wmodelsl
+                    IconTextSwitch {
+                        automaticCheck: true
+                        text: w_name
+                        checked: w_checked
+                        onClicked: {
+                            var count = wmodelsl.count;
+                            for(var i = 0; i < count; i++) {
+                                viewsl.itemAt(i).checked = false;
+                            }
+                            checked = true;
+                            font_active_sailfish_light = text;
+                        }
+                    }
+                }
+
+                Placeholder { }
+                FLabel {
+                    text: qsTr("Android regular font weight")
+                }
+                Repeater {
+                    id: viewa
+                    model: wmodela
+                    IconTextSwitch {
+                        automaticCheck: true
+                        text: w_name
+                        checked: w_checked
+                        onClicked: {
+                            var count = wmodela.count;
+                            for(var i = 0; i < count; i++) {
+                                viewa.itemAt(i).checked = false;
+                            }
+                            checked = true;
+                            font_active_android = text;
+                        }
+                    }
+                }
+
+                Placeholder { }
+                FLabel {
+                    text: qsTr("Android light font weight")
+                }
+                Repeater {
+                    id: viewal
+                    model: wmodelal
+                    IconTextSwitch {
+                        automaticCheck: true
+                        text: w_name
+                        checked: w_checked
+                        onClicked: {
+                            var count = wmodelal.count;
+                            for(var i = 0; i < count; i++) {
+                                viewal.itemAt(i).checked = false;
+                            }
+                            checked = true;
+                            font_active_android_light = text;
+                        }
+                    }
+                }
+
+                Placeholder { }
+
+                Component.onCompleted:  {
+                    var weights = Func.getWeights();
+                    for(var i in weights) {
+                        var w_checked = i == 0;
+                        var w_name = weights[i];
+                        if(i == 0) {
+                            font_active_android = w_name;
+                            font_active_android_light = w_name;
+                            font_active_sailfish = w_name;
+                            font_active_sailfish_light = w_name;
+                        }
+
+                        wmodela.append({w_checked: w_checked, w_name: w_name});
+                        wmodelal.append({w_checked: w_checked, w_name: w_name});
+                        wmodels.append({w_checked: w_checked, w_name: w_name});
+                        wmodelsl.append({w_checked: w_checked, w_name: w_name});
+                    }
+                }
+            }
+
             Component.onCompleted: {
 
                 if(capabilities.fonts != input_fonts) {

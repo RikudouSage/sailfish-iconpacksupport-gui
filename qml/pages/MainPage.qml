@@ -4,6 +4,7 @@ import QtQuick.LocalStorage 2.0
 import "../js/db.js" as DB
 import "../js/functions.js" as Func
 import "../components"
+import "../js/console.js" as Console
 
 
 Page {
@@ -147,17 +148,22 @@ Page {
                                     active_iconpack = m_text;
                                     active_id = m_index;
 
-                                    console.log("Icons applying, "+(homescreen?"restarting homescreen":"not restarting homescreen"));
-
                                     iconpack.apply_icons(m_text, homescreen);
                                 }
                                 if(dialog.fonts) {
                                     active_fontpack = m_text;
                                     active_id_fonts = m_index;
+                                    var font = {};
+                                    font.android = dialog.font_active_android;
+                                    font.android_light = dialog.font_active_android_light;
+                                    font.sailfish = dialog.font_active_sailfish;
+                                    font.sailfish_light = dialog.font_active_sailfish_light;
+
+                                    Console.log(font);
 
                                     console.log("Fonts applying, "+(homescreen?"restarting homescreen":"not restarting homescreen"));
 
-                                    iconpack.apply_fonts(m_text, homescreen);
+                                    iconpack.apply_fonts(m_text, font.android, font.android_light, font.sailfish, font.sailfish_light);
                                 }
 
                                 var type = "";

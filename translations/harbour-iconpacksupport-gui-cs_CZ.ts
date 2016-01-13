@@ -58,6 +58,26 @@
         <source>Do you want to apply &lt;b&gt;%1&lt;/b&gt; theme pack?&lt;br&gt;If you apply it, the app may stop responding for a while and your homescreen will be restarted, which will result in closing all of your open apps.</source>
         <translation>Chcete použít téma &lt;b&gt;%1&lt;/b&gt;? Pokud jej použijete, aplikace může na chvíli přestat odpovídat a také se restartuje vaše domovská obrazovka, kvůli čemuž se zavřou všechny otevřené aplikace.</translation>
     </message>
+    <message>
+        <source>Sailfish regular font weight</source>
+        <translation>Běžná šířka fontu systému</translation>
+    </message>
+    <message>
+        <source>Sailfish light font weight</source>
+        <translation>Tenčí šířka fontu systému</translation>
+    </message>
+    <message>
+        <source>Android regular font weight</source>
+        <translation>Běžná šířka fontu pro Android</translation>
+    </message>
+    <message>
+        <source>Android light font weight</source>
+        <translation>Tenčí šířka fontu pro Android</translation>
+    </message>
+    <message>
+        <source>Font options</source>
+        <translation>Nastavení fontu</translation>
+    </message>
 </context>
 <context>
     <name>CoverPage</name>

@@ -45,5 +45,6 @@ DISTFILES += \
     qml/pages/Confirm.qml \
     qml/pages/Restore.qml \
     qml/pages/About.qml \
-    qml/components/Placeholder.qml
+    qml/components/Placeholder.qml \
+    qml/components/FLabel.qml
 

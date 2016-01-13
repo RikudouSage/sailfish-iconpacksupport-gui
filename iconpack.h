@@ -31,19 +31,29 @@ public:
         return true;
     }
 
-    Q_INVOKABLE bool apply_fonts(const QString name, const bool homescreen = false) const {
+    Q_INVOKABLE bool apply_fonts(const QString name, const QString font_a, const QString font_al, const QString font_s, const QString font_sl) const {
         std::string c_name = name.toStdString();
-        std::string command = "/usr/share/harbour-iconpacksupport-gui/apply_font.sh "+c_name;
+        std::string c_font_a = font_a.toStdString();
+        std::string c_font_al = font_al.toStdString();
+        std::string c_font_s = font_s.toStdString();
+        std::string c_font_sl = font_sl.toStdString();
+        std::string command = "/usr/share/harbour-iconpacksupport-gui/apply_font.sh "+c_name+" "+c_font_a+" "+c_font_al+" "+c_font_s+" "+c_font_sl;
         system(command.c_str());
-        if(homescreen) {
-            system("/usr/share/harbour-iconpacksupport-gui/homescreen.sh");
-        }
         return true;
     }
 
     Q_INVOKABLE bool restart_homescreen() const {
         system("/usr/share/harbour-iconpacksupport-gui/homescreen.sh");
         return true;
+    }
+
+    Q_INVOKABLE QStringList weights(const QString packname) const {
+        QStringList ret;
+        QStringList filter;
+        filter << "*.ttf";
+        QDir dir("/usr/share/harbour-themepack-"+packname+"/font");
+        ret << dir.entryList(filter);
+        return ret;
     }
 
     Q_INVOKABLE bool restore(const bool icons, const bool fonts) const { // calls restore script, which runs original application and restores original icon pack
@@ -81,14 +91,13 @@ public:
         }
 
         QDir font1("/usr/share/harbour-themepack-"+packname+"/font");
-        QDir font2("/usr/share/harbour-themepack-"+packname+"/font-droid");
 
-        if(font1.exists() && font2.exists()) { // both folders must exist
+        if(font1.exists()) {
             font_first_part = true;
         }
 
         if(font_first_part) {
-            if(font1.count() > 0 && font2.count() > 0) {
+            if(font1.count() > 0) {
                 ret << QString("true");
             } else {
                 ret << QString("false");
