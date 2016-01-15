@@ -93,10 +93,6 @@
         <translation>Načítání...</translation>
     </message>
     <message>
-        <source>It looks like you don&apos;t have any icon pack installed :(</source>
-        <translation>Vypadá to, že nemáte nainstalován žádný balíček ikon :(</translation>
-    </message>
-    <message>
         <source>This icon pack is already active.</source>
         <translation>Tento balík ikonek je již aktivní.</translation>
     </message>
@@ -120,6 +116,14 @@
         <source>About</source>
         <translation>O aplikaci</translation>
     </message>
+    <message>
+        <source>Uninstall theme pack</source>
+        <translation>Odinstalovat motiv</translation>
+    </message>
+    <message>
+        <source>It looks like you don&apos;t have any theme pack installed :(</source>
+        <translation>Vypadá to, že nemáte nainstalován žádný motiv :(</translation>
+    </message>
 </context>
 <context>
     <name>Restore</name>
@@ -142,6 +146,17 @@
     <message>
         <source>Restore default fonts</source>
         <translation>Obnovit výchozí fonty</translation>
+    </message>
+</context>
+<context>
+    <name>Uninstall</name>
+    <message>
+        <source>Uninstall</source>
+        <translation>Odinstalovat</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Zrušit</translation>
     </message>
 </context>
 </TS>

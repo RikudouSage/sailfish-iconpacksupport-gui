@@ -35,6 +35,7 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-iconpacksupport-gui-cs_CZ.ts
 TRANSLATIONS += translations/harbour-iconpacksupport-gui-sv.ts
 TRANSLATIONS += translations/harbour-iconpacksupport-gui-fi.ts
+TRANSLATIONS += translations/harbour-iconpacksupport-gui-fr.ts
 
 HEADERS += \
     exec.h \
@@ -46,5 +47,6 @@ DISTFILES += \
     qml/pages/Restore.qml \
     qml/pages/About.qml \
     qml/components/Placeholder.qml \
-    qml/components/FLabel.qml
+    qml/components/FLabel.qml \
+    qml/pages/Uninstall.qml
 

@@ -29,6 +29,22 @@ Page {
             }
 
             MenuItem {
+                id: uninstall
+                text: qsTr("Uninstall theme pack")
+                onClicked: {
+                    var dialog = pageStack.push("Uninstall.qml",{icons: active_iconpack, fonts: active_fontpack});
+                    dialog.accepted.connect(function() {
+                        var removed = dialog.removed;
+                        for(var i = 0; i < removed.length; i++) {
+                            var packname = listview.itemAt(removed[i]).packstring;
+                            ip.uninstall(packname);
+                            listview.itemAt(removed[i]).visible = false;
+                        }
+                    });
+                }
+            }
+
+            MenuItem {
                 text: qsTr("Restore")
                 enabled: active_iconpack != "none" || active_fontpack != "none"
                 signal accepted(string type)
@@ -104,6 +120,7 @@ Page {
                 id: listview
                 model: lmodel
                 Button {
+                    property string packstring: m_text
                     width: page.width - 2 * Theme.paddingLarge
                     x: Theme.paddingLarge
                     signal rejected(string orig)
@@ -303,7 +320,8 @@ Page {
                     if(packs.length) { // if there are any, hide the text "Loading..."
                         infotext.visible = false;
                     } else { // else show this string
-                        infotext.text = qsTr("It looks like you don't have any icon pack installed :(");
+                        infotext.text = qsTr("It looks like you don't have any theme pack installed :(");
+                        uninstall.enabled = false;
                     }
 
                     for(var i = 0; i < packs.length; i++) { // if there are any texts, add them to lmodel, which is used by Repeater and will show all of the iconpacks as buttons

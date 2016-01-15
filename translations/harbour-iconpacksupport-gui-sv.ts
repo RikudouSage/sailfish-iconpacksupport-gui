@@ -60,23 +60,23 @@
     </message>
     <message>
         <source>Sailfish regular font weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Sailfish normalteckensnitt</translation>
     </message>
     <message>
         <source>Sailfish light font weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Sailfish lätteckensnitt</translation>
     </message>
     <message>
         <source>Android regular font weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Android normalteckensnitt</translation>
     </message>
     <message>
         <source>Android light font weight</source>
-        <translation type="unfinished"></translation>
+        <translation>Android lätteckensnitt</translation>
     </message>
     <message>
         <source>Font options</source>
-        <translation type="unfinished"></translation>
+        <translation>Teckensnittsalternativ</translation>
     </message>
 </context>
 <context>
@@ -91,10 +91,6 @@
     <message>
         <source>Loading...</source>
         <translation>Läser in...</translation>
-    </message>
-    <message>
-        <source>It looks like you don&apos;t have any icon pack installed :(</source>
-        <translation>Du verkar inte ha något ikonpaket installerat :(</translation>
     </message>
     <message>
         <source>This icon pack is already active.</source>
@@ -120,6 +116,14 @@
         <source>About</source>
         <translation>Om</translation>
     </message>
+    <message>
+        <source>Uninstall theme pack</source>
+        <translation>Avinstallera temapaket</translation>
+    </message>
+    <message>
+        <source>It looks like you don&apos;t have any theme pack installed :(</source>
+        <translation>Du verkar inte ha något temapaket installerat :(</translation>
+    </message>
 </context>
 <context>
     <name>Restore</name>
@@ -142,6 +146,17 @@
     <message>
         <source>Restore default fonts</source>
         <translation>Återställ standardteckensnitt</translation>
+    </message>
+</context>
+<context>
+    <name>Uninstall</name>
+    <message>
+        <source>Uninstall</source>
+        <translation>Avinstallera</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Avbryt</translation>
     </message>
 </context>
 </TS>

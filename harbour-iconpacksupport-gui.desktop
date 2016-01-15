@@ -6,3 +6,4 @@ Exec=invoker --type=generic -s /usr/bin/harbour-iconpacksupport-gui
 Name=Themes
 Name[cs_CZ]=Motivy
 Name[sv]=Teman
+Name[fi]=Teemat

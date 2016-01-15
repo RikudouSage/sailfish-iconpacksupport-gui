@@ -93,10 +93,6 @@
         <translation>Ladataan...</translation>
     </message>
     <message>
-        <source>It looks like you don&apos;t have any icon pack installed :(</source>
-        <translation>Näyttää siltä ettet ole asentanut yhtään ikonipakettia :(</translation>
-    </message>
-    <message>
         <source>This icon pack is already active.</source>
         <translation>Ikonipaketti on jo aktiivinen.</translation>
     </message>
@@ -118,6 +114,14 @@
     </message>
     <message>
         <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uninstall theme pack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>It looks like you don&apos;t have any theme pack installed :(</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -142,6 +146,17 @@
     <message>
         <source>Restore default fonts</source>
         <translation>Palauta oletus fontit</translation>
+    </message>
+</context>
+<context>
+    <name>Uninstall</name>
+    <message>
+        <source>Uninstall</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

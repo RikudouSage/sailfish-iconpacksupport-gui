@@ -120,6 +120,15 @@ public:
         std::string command = "cat /usr/share/harbour-themepack-"+c_packname+"/package";
         return QString::fromStdString(exec(command.c_str())).trimmed();
     }
+
+    Q_INVOKABLE bool uninstall(const QString packname) const {
+        std::string c_packname = packname.toStdString();
+        std::string cmd = "rpm -qf /usr/share/harbour-themepack-"+c_packname+"/ --queryformat '%{NAME}\n'";
+        std::string package = exec(cmd.c_str());
+        std::string command = "pkcon remove "+package;
+        system(command.c_str());
+        return true;
+    }
 };
 
 #endif // ICONPACK
